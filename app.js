@@ -1,7 +1,10 @@
-$(function(){
-  $('.box1').css({
-    'background-color': '#0000FF',
-    'height': '100px'
+$(function (){
+  $('.box1').slideDown(function (){
+    $('.box1').css({
+      'background-color': '#0000FF',
+      'width': '200px',
+      'height': '100px'
+    }).slideUp();
   });
 });
 
@@ -47,3 +50,40 @@ $('セレクタ').css({
   'プロパティn': '値n'
 }); 
 */
+
+
+// <アニメーション>
+// ・上から下へスライド
+/* 
+$(function(){
+  $('.box1').slideDown();
+}); 
+*/
+// 下から上へスライド
+/* 
+$(function(){
+  $('.box1').slideUp();
+}); 
+*/
+
+// <要素を表示・非表示する>
+// ・非表示の要素をjQueryで表示させる
+/* 
+$(function(){
+  $('.box1').show();
+  $('.box1').css({'background-color': '#0000FF'});
+}); 
+*/
+// ・示されている要素をjQueryで非表示にする
+/* 
+$(function(){
+  $('.box1').hide();
+}); 
+*/
+// .slideDown();、.slideUp();、.show();、.hide();の4つを使えるようになると、さまざまなスタイルに応用できる。
+
+
+// <練習問題>（1番上）
+// javascriptでは、引数の中に関数を入れることができる。
+// slideDown()の引数にfunctionを書き加えることで、スライドダウンした後にfunctionを実行することができるようになる。
+// よって、slideDownの中のfunctionに、cssで色と大きさを変え、slideUp()をすることで要件を満たすことができる。
